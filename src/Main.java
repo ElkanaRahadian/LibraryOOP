@@ -75,9 +75,9 @@ public class Main {
 		Member testMember = vMember.get(memberID - 1);
 		if (Member.bookChecking(bookID) == null) {
 			testMember.quotaValidation((Book) vBook.get(bookID - 1));
-			System.out.println("Borrowing success.");
+			System.out.println("Borrowing success.\n");
 		} else {
-			System.out.println("Book has already been borrowed.");
+			System.out.println("Book has already been borrowed.\n");
 		}
 	}
 
@@ -93,10 +93,10 @@ public class Main {
 			mainObj.nextLine();
 		} while (bookID < 1 || bookID > vBook.size());
 		if (Member.bookChecking(bookID).equals(0)) {
-			System.out.println("Book has not been borrowed");
+			System.out.println("Book has not been borrowed\n");
 		} else {
 			Member.returnBook(bookID);
-			System.out.println("Book returned");
+			System.out.println("Book returned\n");
 		}
 	}
 
@@ -112,10 +112,10 @@ public class Main {
 				} else {
 					for (int i = 0; i < vMember.size(); i++) {
 						Member newMember = vMember.get(i);
-						System.out.println(newMember.idMember + "." + newMember.nameMember + " -- Borrowed books: ");
+						System.out.print(newMember.idMember + "." + newMember.nameMember + " -- Borrowed books: ");
 						for (int j = 0; j < Member.vecBook.size(); j++) {
 							Book newBook = Member.vecBook.get(j);
-							System.out.print(newBook.bookId + "." + newBook.bookTitle + ";");
+							System.out.print(newBook.bookId + ". " + newBook.bookTitle + "; \n");
 						}						
 					}
 				}
