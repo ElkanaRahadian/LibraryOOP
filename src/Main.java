@@ -112,7 +112,7 @@ public class Main {
 				} else {
 					for (int i = 0; i < vMember.size(); i++) {
 						Member newMember = vMember.get(i);
-						System.out.print(newMember.idMember + "." + newMember.nameMember + " -- Borrowed books: ");
+						System.out.print(newMember.idMember + "." + newMember.nameMember + " -- Borrowed books: \n");
 						for (int j = 0; j < Member.vecBook.size(); j++) {
 							Book newBook = Member.vecBook.get(j);
 							System.out.print(newBook.bookId + ". " + newBook.bookTitle + "; \n");
